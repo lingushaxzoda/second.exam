@@ -1,0 +1,79 @@
+.header {
+    .container {
+        @include h_container;
+    }
+}
+.all{
+    display: flex;
+    align-items: center;
+}
+.nav {
+
+    &__list {
+        display: flex;
+    }
+
+    &__item +&__item {
+        padding-left: 40px;
+    }
+
+    &__link {
+        @include nav__link;
+    }
+}
+
+.btn {
+    margin: 0;
+    padding: 0;
+    border-radius: 24px;
+    background: #BA4270;
+    border: none;
+    &__word {
+        @include btn__word;
+    }
+}
+.btn__menu{
+    display: none;
+}
+.btn__exit{
+    display: none;
+}
+@media only screen and (max-width:768px){
+    .btn { 
+        margin-right: -85px;
+    }
+    .btn__menu{
+        display: none;
+    }
+}
+.btn__exit{
+    display: none;
+}
+
+@media only screen and (max-width:376px) {
+    .nav__list {
+        display: none;
+    }
+
+    .btn {
+        display: block;
+        margin-right: -150px;
+    }
+
+    .btn__exit {
+        display: none;
+ }
+
+}
+
+.btn__menu--exit {
+    display: none;
+}
+
+.btn__exit--menu {
+    display: none;
+}
+
+.nav__blok {
+    @include nav__block;
+}
